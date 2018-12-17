@@ -1,0 +1,14 @@
+@import '~settings';
+
+.info-widget {
+    $this: &;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $color-dark-grey;
+    height: 60px;
+
+    @include tablet {
+        height: 121px;
+    }
+}

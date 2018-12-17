@@ -1,0 +1,18 @@
+.button {
+    $this: &;
+    @include reset-button();
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid $color-white;
+    font-size: 18px;
+    line-height: 1;
+    font-weight: $weight-bold;
+    letter-spacing: .6px;
+    color: $color-white;
+    text-transform: uppercase;
+    background-color: transparent;
+    height: 60px;
+    cursor: pointer;
+    padding: 0 20px;
+}

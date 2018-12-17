@@ -1,0 +1,23 @@
+@import '~settings';
+
+.game {
+    $this: &;
+    margin: 40px 0;
+
+    @include tablet {
+        margin: 80px 0;
+    }
+
+    &__title {
+        font-size: 26px;
+        line-height: 1;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+        font-weight: $weight-bold;
+
+        @include tablet {
+            font-size: 48px;
+            margin-bottom: 30px;
+        }
+    }
+}

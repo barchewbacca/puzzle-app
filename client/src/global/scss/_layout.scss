@@ -1,0 +1,20 @@
+body {
+    background-color: $color-dark;
+    color: $color-white;
+}
+
+.container {
+    max-width: 840px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.hide-on-mobile {
+    @include mobile-only {
+        display: none;
+    }
+}
+
+.visually-hidden {
+    @include visually-hidden();
+}

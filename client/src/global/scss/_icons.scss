@@ -1,0 +1,13 @@
+.icon {
+	fill: currentColor;
+    overflow: hidden;
+    flex-shrink: 0;
+
+    &--before {
+        margin-right: 20px;
+    }
+
+    &--after {
+        margin-left: 20px;
+    }
+}

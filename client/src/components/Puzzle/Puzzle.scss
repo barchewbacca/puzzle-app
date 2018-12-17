@@ -1,0 +1,121 @@
+@import '~settings';
+
+.puzzle {
+    $this: &;
+
+
+    &__body {
+        display: flex;
+        flex-direction: column-reverse;
+        margin-bottom: 20px;
+
+        @include tablet {
+            flex-direction: row;
+            margin-bottom: 40px;
+        }
+    }
+
+    &__area {
+        position: relative;
+
+        @include tablet {
+            width: 100%;
+            height: 100%;
+            flex: 0 0 500px;
+        }
+
+        // &::before {
+        //     content: '';
+        //     display: block;
+        //     padding-top: 100%;
+        // }
+    }
+
+    &__background {
+        display: block;
+        width: 100%;
+        height: 100%;
+        // position: absolute;
+        // z-index: -1;
+        // top: 0;
+        // left: 0;
+        opacity: .15;
+        user-select: none;
+        pointer-events: none;
+        border: 2px solid transparent;
+    }
+
+    &__cell {
+        display: block;
+        position: absolute;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: contain;
+        border: 2px solid transparent;
+        will-change: top, left, right, bottom;
+        transition-property: top, left, right, bottom;
+        transition-duration: .4s;
+
+        &.is-hidden {
+            display: none;
+        }
+    }
+
+    &__number {
+        font-size: 14px;
+        font-weight: $weight-bold;
+        color: $color-white;
+        width: 28px;
+        height: 28px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba($color-black, .55);
+    }
+
+    &__aside {
+        display: flex;
+        width: calc(100% + 4px);
+        margin: 0 -2px 20px;
+
+        @include tablet {
+            width: 100%;
+            display: block;
+            margin: 0 0 0 40px;
+            flex: 1 1 auto;
+        }
+    }
+
+    &__info {
+        flex: 1 1 0;
+        margin: 0 2px;
+
+        @include tablet {
+            margin: 0;
+        }
+    }
+
+    &__info + &__info {
+        @include tablet {
+            margin-top: 4px;
+        }
+    }
+
+    &__preview {
+        display: none;
+
+        @include tablet {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__button {
+        width: 100%;
+
+        @include tablet {
+            max-width: 500px;
+        }
+    }
+}
